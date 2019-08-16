@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyFirstXamarin.Relax">
+    <AbsoluteLayout>
+        <Image Source="http://lorempixel.com/640/480/nature/7" Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+        <Label Text="Relax" TextColor="Azure" FontSize="30" HorizontalTextAlignment="Center"
+               AbsoluteLayout.LayoutBounds=".5, 20, 100, 50" AbsoluteLayout.LayoutFlags="XProportional"/>
+        <BoxView BackgroundColor="Black" Opacity=".5"
+                 AbsoluteLayout.LayoutBounds="0, 1, 1, 100" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+        <StackLayout Orientation="Horizontal" Padding="30, 0" VerticalOptions="Center"
+                     AbsoluteLayout.LayoutBounds="0, 1, 1, 100" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+            <Label FontSize="15" TextColor="White" HorizontalOptions="Center" Text="Profile"/>
+            <Label FontSize="15" TextColor="White" HorizontalOptions="CenterAndExpand" Text="Midetate"/>
+            <Label FontSize="15" TextColor="White" HorizontalOptions="Center" Text="Theme"/>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
