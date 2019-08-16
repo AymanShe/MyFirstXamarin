@@ -10,7 +10,7 @@ namespace MyFirstXamarin
         {
             InitializeComponent();
 
-            MainPage = new InstagramLike();
+            MainPage = new Wallet();
         }
 
         protected override void OnStart()
