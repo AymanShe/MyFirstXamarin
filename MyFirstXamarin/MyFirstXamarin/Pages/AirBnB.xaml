@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyFirstXamarin.Pages.AirBnB">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+    <StackLayout>
+        <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
+        <ListView x:Name="lv_search_list"
+                  IsGroupingEnabled="True"
+                  GroupDisplayBinding="{Binding Title}"
+                  GroupShortNameBinding="{Binding Title}"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="Lv_search_list_Refreshing"
+                  ItemTapped="Lv_search_list_ItemTapped"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout>
+                            <Label Text="{Binding Location}" TextColor="Blue"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding CheckIn, StringFormat='{0:MMMM dd, yyyy}'}"  TextColor="Gray"/>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding CheckOut, StringFormat='{0:MMMM dd, yyyy}'}}" TextColor="Gray"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

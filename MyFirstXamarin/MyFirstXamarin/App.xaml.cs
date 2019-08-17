@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstXamarin.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace MyFirstXamarin
         {
             InitializeComponent();
 
-            MainPage = new Wallet();
+            MainPage = new AirBnB();
         }
 
         protected override void OnStart()
